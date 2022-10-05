@@ -47,4 +47,19 @@ float getDensity() {
     return density;
 }
 
+float getPercentAbundance() {
+    
+    float individualAtomCount = 0;
+    float totalAtomCount = 0;
+    
+    std::cout << "Enter the number of atoms of one particular isotope: " << std::endl;
+    std::cin >> individualAtomCount;
+    std::cout << "Enter the total number of atoms: " << std::endl;
+    std::cin >> totalAtomCount;
+    
+    float percentAbundance = (individualAtomCount / totalAtomCount) * 100;
+    std::cout << "The percent abundance is: " << percentAbundance << std::endl;
+    return percentAbundance;
+}
+
 #endif
