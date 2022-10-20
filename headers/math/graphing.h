@@ -12,21 +12,21 @@ float getHypotenuse(float a, float b, bool print = false) {
 }
 
 // graphing with coordinate points
-void offsetPoints(Vec2f& vec, float xOffset, float yOffset, bool print = false) {
+void offsetPoints(Vec2& vec, float xOffset, float yOffset, bool print = false) {
     vec.x += xOffset;
     vec.y += yOffset;
     if (print)
         std::cout << "New point: (" << vec.x << ", " << vec.y << ")" << std::endl;
 }
 
-void offsetPoints(Vec2f& vec, Vec2f& offsetVec, bool print = false) {
+void offsetPoints(Vec2& vec, Vec2& offsetVec, bool print = false) {
     vec.x += offsetVec.x;
     vec.y += offsetVec.y;
     if (print)
         std::cout << "New point: (" << vec.x << ", " << vec.y << ")" << std::endl;
 }
 
-void mirrorPoints(Vec2f& vec, int axis, bool print = false) {
+void mirrorPoints(Vec2& vec, int axis, bool print = false) {
     switch (axis) {
         case MAxis_X: {
             vec.y *= -1;
@@ -66,7 +66,7 @@ void mirrorPoints(Vec2f& vec, int axis, bool print = false) {
         // 2. take that distance and multiply it by 2. you found your new coordinate
 }
 
-void rotatePoints(Vec2f& vec, int rotation, bool print = false) {
+void rotatePoints(Vec2& vec, int rotation, bool print = false) {
     switch (rotation) {
         case Rot_90: {
             int t = vec.y * -1;
@@ -96,7 +96,7 @@ void printCoordinates(float x, float y) {
     std::cout << "(" << x << ", " << y << ")" << std::endl;
 }
 
-void printCoordinates(Vec2f& vec) {
+void printCoordinates(Vec2& vec) {
     std::cout << "(" << vec.x << ", " << vec.y << ")" << std::endl;
 }
 #endif
