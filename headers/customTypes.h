@@ -2,9 +2,8 @@
 #ifndef CUSTOM_TYPE_H
 #define CUSTOM_TYPE_H
 #include <cmath>
-#include "periodicTable.h"
 // graphing
-struct Vec2f {
+struct Vec2 {
     float x = 0.0;
     float y = 0.0;
 };
