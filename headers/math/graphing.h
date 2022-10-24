@@ -68,21 +68,25 @@ void mirrorPoints(Vec2& vec, int axis, bool print = false) {
 
 void rotatePoints(Vec2& vec, int rotation, bool print = false) {
     switch (rotation) {
-        case Rot_90: {
+        case Neg_270:
+        case Rot_Pos90: {
             int t = vec.y * -1;
             vec.y = vec.x;
             vec.x = t;
             break;
         }
-        case Rot_180: {
+        case Rot_Neg180:
+        case Rot_Pos180: {
             vec.x *= -1;
             vec.y *= -1;
             break;
         }
-        case Rot_270: {
+        case Rot_Neg90:
+        case Rot_Pos270: {
             int t = vec.y;
             vec.y = vec.x * -1;
             vec.x = t;
+            break;
         }
         default: {
             std::cout << "Invalid rotation axis." << std::endl;
