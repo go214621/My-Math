@@ -68,7 +68,7 @@ void mirrorPoints(Vec2& vec, int axis, bool print = false) {
 
 void rotatePoints(Vec2& vec, int rotation, bool print = false) {
     switch (rotation) {
-        case Neg_270:
+        case Rot_Neg270:
         case Rot_Pos90: {
             int t = vec.y * -1;
             vec.y = vec.x;
