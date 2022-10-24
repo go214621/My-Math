@@ -17,9 +17,12 @@ enum MirrorAxis {
 };
 
 enum RotationValue {
-    Rot_90,
-    Rot_180,
-    Rot_270,
+    Rot_Pos90,
+    Rot_Neg90,
+    Rot_Pos180,
+    Rot_Neg180,
+    Rot_Pos270,
+    Rot_Neg270,
 };
 // chemistry
 const float avaNum = 6.02 * pow(10, 23);
