@@ -37,15 +37,13 @@ void mirrorPoints(Vec2& vec, int axis, bool print = false) {
             break;
         }
         case MAxis_YEqX: {
-            int t = 0;
-            t = vec.y;
+            float t = vec.y;
             vec.y = vec.x;
             vec.x = t;
             break;
         }
         case MAxis_YEqNegX: {
-            int t = 0;
-            t = vec.y * -1;
+            float t = vec.y * -1;
             vec.y = vec.x * -1;
             vec.x = t;
             break;
@@ -64,13 +62,14 @@ void mirrorPoints(Vec2& vec, int axis, bool print = false) {
         // todo: add offsets to line of reflection later?
         // 1. find distance between current point x/y coordinate and the offset of the mirror line
         // 2. take that distance and multiply it by 2. you found your new coordinate
+        // todo: find offset function
 }
 
 void rotatePoints(Vec2& vec, int rotation, bool print = false) {
     switch (rotation) {
         case Rot_Neg270:
         case Rot_Pos90: {
-            int t = vec.y * -1;
+            float t = vec.y * -1;
             vec.y = vec.x;
             vec.x = t;
             break;
@@ -83,7 +82,7 @@ void rotatePoints(Vec2& vec, int rotation, bool print = false) {
         }
         case Rot_Neg90:
         case Rot_Pos270: {
-            int t = vec.y;
+            float t = vec.y;
             vec.y = vec.x * -1;
             vec.x = t;
             break;
